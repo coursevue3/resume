@@ -45,8 +45,6 @@ export default {
         const data = await fetch('https://jsonplaceholder.typicode.com/comments?_limit=5');
         const res = await data.json() || {};
 
-        console.log(data, res);
-
         this.commentsList = Object.keys(res).map(key => {
           return {
             ...res[key],
